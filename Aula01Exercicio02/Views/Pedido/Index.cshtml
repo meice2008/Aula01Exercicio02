@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Pedido>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Listar Pedidos</title>
+    <link href="~/css/bootstrap.min (1).css" rel="stylesheet" />
+</head>
+<body>
+    <div class="m-3">
+        <h2>Gerenciamento de Pedidos</h2>
+
+        <p>
+            <a asp-action="Cadastrar">Cadastrar Pedido</a>
+        </p>
+        <table class="table table-hover table-striped" style="text-align:left">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Produto)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Quantidade)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Valor)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Data)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fornecedor)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Produto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantidade)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Valor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Data)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fornecedor)
+                        </td>
+                        <td>
+                            <a asp-action="Alterar" asp-route-id="@item.PedidoId">Editar</a> |
+                            <a asp-action="Deletar" asp-route-id="@item.PedidoId">Deletar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br />
+        <b>Dados atualizados: </b> @ViewBag.Data
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@model Pedido
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/bootstrap.min (1).css" rel="stylesheet" />
+    <title>Alterar Pedido</title>
+</head>
+<body>
+    <div class="m-3">
+        <form asp-action="Alterar">
+            <input asp-for="PedidoId" type="hidden" />
+            <fieldset style="margin-bottom:30px">
+                <legend>Alterar Pedido</legend>
+                <div class="form-group">
+                    <label asp-for="Produto" class="control-label"></label>
+                    <input asp-for="Produto" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Quantidade" class="control-label"></label>
+                    <input asp-for="Quantidade" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Valor" class="control-label"></label>
+                    <input asp-for="Valor" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Data" class="control-label"></label>
+                    <input asp-for="Data" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Fornecedor" class="control-label"></label>
+                    <input asp-for="Fornecedor" class="form-control" />
+                </div>
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
+

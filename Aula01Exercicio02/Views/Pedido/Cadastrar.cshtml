@@ -1,0 +1,63 @@
+﻿@model Pedido
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Cadastrar Pedido</title>
+</head>
+<body>
+
+    <h2>Cadastrar Pedido</h2>
+    <form asp-action="Cadastrar">
+        <table>
+            <tr>
+                <td>
+                    <label asp-for="Produto" class="control-label"></label>
+                </td>
+                <td>
+                    <input asp-for="Produto" class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Quantidade" class="control-label"></label>
+                </td>
+                <td>
+                    <input asp-for="Quantidade" class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Valor" class="control-label"></label>
+                </td>
+                <td>
+                    <input asp-for="Valor" class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Data" class="control-label"></label>
+                </td>
+                <td>
+                    <input asp-for="Data" class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label asp-for="Fornecedor" class="control-label"></label>
+                </td>
+                <td>
+                    <input asp-for="Fornecedor" class="form-control" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Cadastrar" class="btn btn-default" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
